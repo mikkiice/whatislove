@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>New User</title>
+</head>
+<body>
+<h1>Make new User</h1>
+
+<form action="#" th:action="@{/users/update}" th:object="${user}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <label for="username">Name:</label>
+    <input type="text" id="username" th:field="*{username}" required/>
+    <button type="submit">Accept</button>
+</form>
+<a href="/users">Back</a>
+</body>
+</html>
